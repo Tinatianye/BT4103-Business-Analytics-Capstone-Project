@@ -119,7 +119,7 @@ with col1:
     # Display India landed price
     st.markdown(f"<span style='color:#0080C7; font-weight:bold;'>The landed price of China's HRC in India is: ₹ {final_price:.0f}/t</span>", unsafe_allow_html=True)
 
-csv_cn = china_landed_price_modified.reset_index().to_csv(index=False).encode('utf-8')
+    csv_cn = china_landed_price_modified.reset_index().to_csv(index=False).encode('utf-8')
     st.download_button(
         label="📥 Download China's Landed Price CSV",
         data=csv_cn,
@@ -129,7 +129,7 @@ csv_cn = china_landed_price_modified.reset_index().to_csv(index=False).encode('u
     )
 
     final_price = china_landed_price_modified["Price"]["HRC Basic Landed @ Mumbai Market (Rs/t)"]
-
+    st.markdown(f"...", unsafe_allow_html=True)
 
 # --- India Landed Price (Japan) Calculator ---
 with col2:
@@ -193,7 +193,7 @@ with col2:
 
 
 # --- Download Japan's landed price as CSV ---
-csv_jp = japan_landed_price_modified.reset_index().to_csv(index=False).encode('utf-8')
+    csv_jp = japan_landed_price_modified.reset_index().to_csv(index=False).encode('utf-8')
     st.download_button(
         label="📥 Download Japan's Landed Price CSV",
         data=csv_jp,
