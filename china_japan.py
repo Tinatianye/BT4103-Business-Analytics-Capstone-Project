@@ -39,7 +39,7 @@ def log_trans(df):
 
 # %%
 def generate_forecast(iron_ore_up, hcc_up, scrap_up, export_perc_up, fai_up, iron_ore_down, hcc_down, scrap_down, export_perc_down, fai_down, months_ahead, selected_countries):
-    file_path = Path(__file__).resolve().parent.parent / "data" / "final" / "wo_na.csv"
+    file_path = "data/final/wo_na.csv"
     df = pd.read_csv(file_path)
     df.set_index('Date', inplace=True)
     df.index = pd.to_datetime(df.index)
@@ -155,7 +155,7 @@ def generate_forecast(iron_ore_up, hcc_up, scrap_up, export_perc_up, fai_up, iro
     
 
     '''JAPAN FORECAST'''
-    file_path_JP = Path(__file__).resolve().parent.parent / "data" / "final" / "hrc_price_CN_JP.csv"
+    file_path_JP = "data/final/hrc_price_CN_JP.csv"
     hrc_price_CN_JP = pd.read_csv(file_path_JP)
     hrc_price_CN_JP.dropna(inplace=True)
     hrc_price_CN_JP.set_index('Date', inplace=True)
