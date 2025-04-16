@@ -129,7 +129,7 @@ with col1:
     )
 
     final_price = china_landed_price_modified["Price"]["HRC Basic Landed @ Mumbai Market (Rs/t)"]
-    st.markdown(f"...", unsafe_allow_html=True)
+
 
 # --- India Landed Price (Japan) Calculator ---
 with col2:
