@@ -157,7 +157,7 @@ def generate_forecast(iron_ore_up, hcc_up, scrap_up, export_perc_up, fai_up, iro
 
     # --- Use a Simple Linear Regression model to predict Japan's HRC prices from China's HRC prices ---
     # Read csv that contains China's and Japan's historical HRC prices
-    file_path_JP = Path(__file__).resolve().parent.parent / "data" / "final" / "hrc_price_CN_JP.csv"
+    file_path_JP = "hrc_price_CN_JP.csv"
     hrc_price_CN_JP = pd.read_csv(file_path_JP)
     hrc_price_CN_JP.dropna(inplace=True)
     hrc_price_CN_JP.set_index('Date', inplace=True)
