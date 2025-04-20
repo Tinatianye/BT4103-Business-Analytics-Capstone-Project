@@ -33,7 +33,7 @@ def log_trans(df):
 
 # --- Generate forecast of China's and Japan's HRC prices ---
 def generate_forecast(iron_ore_up, hcc_up, scrap_up, export_perc_up, fai_up, iron_ore_down, hcc_down, scrap_down, export_perc_down, fai_down, selected_countries):
-    file_path = "wo_na.csv"
+    file_path = "data/final/wo_na.csv"
     df = pd.read_csv(file_path)
     df.set_index('Date', inplace=True)
     df.index = pd.to_datetime(df.index)
