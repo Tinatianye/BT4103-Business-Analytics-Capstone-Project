@@ -5,6 +5,16 @@ from china_japan import generate_forecast
 # Set page config
 st.set_page_config(page_title="HRC Price Forecasting Model Dashboard", layout="wide")
 
+st.sidebar.header("upload file" )
+uploaded_file = st.sidebar.file_uploader("upload file" , type=["csv", "xlsx"])
+if uploaded_file is not None:
+    if uploaded_file.name.endswith(".csv"):
+        uploaded_data = pd.read_csv(uploaded_file)
+    elif uploaded_file.name.endswith(".xlsx"):
+        uploaded_data = pd.read_excel(uploaded_file)
+    
+    st.sidebar.write("Preview of uploaded data：", uploaded_data.head())
+
 # --- Custom Dashboard Title ---
 st.markdown("""
     <div style='text-align: center; padding: 1rem 0; background-color: #0080C7; color: white; border-radius: 8px;'>
